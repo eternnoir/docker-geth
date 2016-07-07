@@ -1,4 +1,4 @@
-# goeth Docker image
+# geth Docker image
 
 Very small geth docker base image.
 
