@@ -1,0 +1,20 @@
+version: '2'
+services:
+    bootnode:
+        build: ./geth-bootstrap
+        ports:
+            - 127.0.0.1:30304:30303
+            - 127.0.0.1:30304:30303/udp
+
+    eth:
+        networks:
+            ethereum:
+        build: ./geth-clinet
+        depends_on:
+            - bootnode
+        links:
+            - bootnode
+
+networks:
+  ethereum:
+    driver: bridge
