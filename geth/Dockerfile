@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV GETH_VERSION 1.4.9
+ENV GETH_VERSION 1.4.18
 
 RUN apk add --update go alpine-sdk && \
 	git clone --branch v$GETH_VERSION https://github.com/ethereum/go-ethereum.git --depth 1 && \
